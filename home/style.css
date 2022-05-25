@@ -1,0 +1,238 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: #222831;
+}
+.title h1{
+    position: relative;
+    top: 70px;
+    text-shadow: 8px 8px 4px rgba(255,255,255, 0.05);
+    font-size:3em;
+    color: #fff;
+    position: relative;
+    left: 25%;
+    text-align: center;
+    width:50%;
+    height: 50px;
+    position: relative;
+    z-index: 11;
+}
+.body{
+    display: flex;
+    justify-content:center;
+    min-height:95vh;
+}
+.body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00,#f0f);
+    clip-path: circle(30% at right 70%);
+}
+.body::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3,#e91e63);
+    clip-path: circle(20% at 10% 10%);
+}
+#math{
+    /* opacity: 0.4; */
+    position: relative;
+    right: 50px;
+    bottom: 50px;
+    width: 300px;
+    height: 300px;
+    z-index: 12;
+}
+#books{
+    /* opacity: 0.7; */
+    position:absolute;
+    right: 40px;
+    top: 350px;
+    width: 320px;
+    height: 320px;
+    z-index: -0.5;
+}
+.container{
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    max-width:1100px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container .card{
+    position: relative;
+    right:10%;
+    width:280px;
+    height: 400px;
+    margin:30px;    
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius:15px;
+    background: rgba(255,255,255, 0.1);
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255, 0.5);
+    border-left: 1px solid rgba(255,255,255, 0.5);
+    backdrop-filter: blur(5px);
+}
+.container .card .content{
+    padding:20px;
+    text-align:center;
+    transform: translateY(0px);
+    opacity:1;
+    transition:0.5s;
+}
+
+.container .card .content h2{
+    position:absolute;
+    top: -40px;
+    right: 30px;
+    font-size: 4em;
+    color: rgba(255,255,255, 0.05);
+    pointer-events: none;
+}
+.container .card .content h3{
+    font-size:1.8em;
+    color: #fff;
+   z-index: 1;
+}
+.container .card .content p{
+    font-size:1em;
+    color: #fff;
+    font-weight: 300;
+}
+.container .card .content a{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding:8px 20px;
+    margin-top: 15px;
+    background: #F27014;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*Responsive Phone */
+@media only screen and (max-width: 600px) {
+    #math{
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        left: -10px;
+        top: 10px;
+        z-index: -0.5;
+    }
+    #books{
+        top:1200px;
+        right: 0px;
+        width: 100px;
+        height: 100px;
+    }
+    .title h1{
+        top: 0px;
+        width: 100%;    
+    }
+    .container .card{
+        position: relative;
+        left: 0;
+        right: 0;
+    }
+    .body::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#2196f3,#e91e63);
+        clip-path: circle(30% at 15% 15%);
+    }
+    .body::before{
+        content: "";
+        position: absolute;
+        top: 1400px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#f00,#f0f);
+        clip-path: circle(35% at right 70%);
+    }
+    .container .card .content h2:nth-child(1){
+        position:absolute;
+        top: -40px;
+        right: -25px;
+        font-size: 4em;
+        color: rgba(255,255,255, 0.05);
+        pointer-events: none;
+    }
+  }
+  @media only screen and (max-width: 750px){
+    .container .card{
+        position: relative;
+        top: 100px;
+        left: 0px;
+    }
+    .title h1{
+        margin-top:320px;
+        position: relative;
+        left:0px;
+        width: 100%;
+    }
+    #math{
+        width: 270px;
+        height: 270px;
+        position: absolute;
+        right: 330px;
+        bottom: 500px;
+        z-index: -0.5;
+    }
+    #books{
+        top:1400px;
+        width: 270px;
+        height: 270px;
+    }
+    .body::before{
+        content: "";
+        position: absolute;
+        top: 1000px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#f00,#f0f);
+        clip-path: circle(30% at right 70%);
+    }
+    .body::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#2196f3,#e91e63);
+        clip-path: circle(30% at 15% 15%);
+    }
+    .container .card .content h2:nth-child(1){
+        position:absolute;
+        top: -40px;
+        right: -25px;
+        font-size: 4em;
+        color: rgba(255,255,255, 0.05);
+        pointer-events: none;
+    }
+  }
